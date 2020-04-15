@@ -2,12 +2,9 @@ import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid'
 import BioMetricImg from '../Assets/scan.gif'
 import strings from '../strings/Strings'
-import Button from '@material-ui/core/Button'
 import Swal from 'sweetalert2'
 const remote = window.require('electron').remote;
 const electronFs = remote.require('fs');
-const fs = remote.require('fs');
-const path = require('path')
 
 const { app, globalShortcut } = window.require('electron').remote
 const { execFile, spawn } = window.require('electron').remote.require('child_process');
