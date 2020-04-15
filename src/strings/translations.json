@@ -1,0 +1,22 @@
+{
+    "en":{
+        "language":"English",
+        "appName": "FaceToFace",
+        "description":"Biometric scan tool for Log-in",
+        "buttonUpload":"Upload Photo",
+        "fileChooserTitle":"Select faces (.jpg, .png)",
+        "fileCopied": "Files uploaded",
+        "fileCopiedDescr":"Files correctly uploaded",
+        "capture":"Capture",
+        "disable":"Disable",
+        "take":"Take",
+        "snapSuccess":"Snapshot Captured",
+        "detectDescription":"Detecting: please stay with your face visible",
+        "authorized":"AUTHORIZED",
+        "intrusion":"INTRUSION DETECTED",
+        "retrying":"Retrying..",
+        "shuttingDown":"Shutting down in {secs} seconds",
+        "deleteMedia":"Delete all photo (s)",
+        "deleteSuccess":"All photo (s) deleted"
+    }
+}
