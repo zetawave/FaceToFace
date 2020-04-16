@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Grid from '@material-ui/core/Grid'
-import AppLogo from '../Assets/logo_transparent.png'
+import AppLogo from '../Assets/biometrics.png'
 import strings from '../strings/Strings'
 import Button from '@material-ui/core/Button'
 import moment from 'moment'
@@ -28,8 +28,6 @@ export default class Settings extends Component {
             WebCamera.set({
                 width: '25rem',
                 height: '15rem',
-                // dest_width: 1024,
-                // dest_height: 768,
                 image_format: 'jpeg',
                 jpeg_quality: 100,
                 force_flash: false,
@@ -113,6 +111,8 @@ export default class Settings extends Component {
         return response;
     }
 
+    /* Delete all photos saved */
+
     deleteAllMedias = () => {
         let userAppDataPath = app.getPath('appData')
         let dataDir = userAppDataPath + "/" + "FaceToFaceData"
@@ -148,7 +148,7 @@ export default class Settings extends Component {
                     {/* <Paper style={{ backgroundColor: "#1C1C1C", margin: '1rem', padding: '1rem', display: 'inline-flex' }}> */}
                     <Grid container style={{ textAlign: 'center' }}>
                         <Grid item xs={12} style={{ textAlign: 'center' }}>
-                            <img src={AppLogo} width='400' height='250'></img>
+                            <img src={AppLogo} width='200' height='200'></img>
                         </Grid>
                         <Grid item xs={12} style={{ textAlign: 'center', fontFamily: 'Roboto' }}>
                             <h2 style={{ color: 'white', padding: 0 }}>{strings.appName}</h2>
