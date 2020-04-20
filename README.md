@@ -6,7 +6,7 @@ FaceToFace is an application that allow you to join in your PC with a biometric 
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+FaceToFace using different languages and frameworks:
 
 * [ReactJS] - HTML enhanced for web apps!
 * [Python] - Awesome script Language
