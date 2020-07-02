@@ -10,7 +10,7 @@ FaceToFace using different languages and frameworks:
 
 * [ReactJS] - HTML enhanced for web apps!
 * [Python] - Awesome script Language
-* [ElectronJS] - Framework to buil cross-platform apps.
+* [ElectronJS] - Framework to build cross-platform apps.
 * [node.js] - evented I/O for the backend
 
 ### Platforms
