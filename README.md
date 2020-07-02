@@ -12,3 +12,9 @@ FaceToFace using different languages and frameworks:
 * [Python] - Awesome script Language
 * [ElectronJS] - Framework to buil cross-platform apps.
 * [node.js] - evented I/O for the backend
+
+### Platforms
+
+* Linux - TESTED
+* MacOS - NOT TESTED
+* Windows - WIP/NOT WORKING
