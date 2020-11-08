@@ -87,8 +87,15 @@ export default class Settings extends Component {
             let fileName = hash.sha256().update(moment().toISOString()).digest('hex').toString().slice(0, 6);
             let dataDir = userAppDataPath + "/" + "FaceToFaceData"
 
+            let exists = electronFs.existsSync(userAppDataPath)
+            let existsUserDataDir = electronFs.existsSync(dataDir)
+            if ((!exists || !existsUserDataDir) && electronFs.mkdirSync(dataDir)) {
+                console.log("User data folder created")
+            }
+
             electronFs.writeFile(dataDir + "/" + fileName + ".jpg", imageBuffer.data, (err) => {
                 if (err) {
+                    console.log(err)
                     Swal.fire('Error', err, 'error')
                 } else {
                     Swal.fire('Success', strings.snapSuccess, 'success')
