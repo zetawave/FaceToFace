@@ -5,3 +5,7 @@ src/python/face_recognition_models/
 src/python/face_recognition_models-0.3.0-py2.7.egg-info/
 
 lib/
+
+build/
+
+dist/

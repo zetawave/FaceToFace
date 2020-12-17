@@ -31,8 +31,13 @@ export default class DetectComponent extends Component {
     componentDidMount() {
 
         this.mountCamera()
-        let timeoutId = setTimeout(this.takeSnap, 100) // Wait for camera is mounted
-        this.setState({ timeoutId: timeoutId })
+        if (!this.props.dev) {
+            let timeoutId = setTimeout(this.takeSnap, 100) // Wait for camera is mounted
+            this.setState({ timeoutId: timeoutId })
+        }else{
+            // Development mode
+            console.log("Entered in detect component: development mode")
+        }
     }
 
 
@@ -75,7 +80,7 @@ export default class DetectComponent extends Component {
                 command = 'poweroff'
                 break;
         }
-        spawn(command, null, {shell:true}) //Shutdown
+        spawn(command, null, { shell: true }) //Shutdown
     }
 
     /* Action in function of authorization */
@@ -83,7 +88,7 @@ export default class DetectComponent extends Component {
         if (!isAuthorized) {
             let timeoutId = setTimeout(this.shutDown, 5000)
             this.setState({
-                intrusionMessage: strings.shuttingDown.replace('{secs}', (5000/1000)),
+                intrusionMessage: strings.shuttingDown.replace('{secs}', (5000 / 1000)),
                 timeoutId: timeoutId
             })
             return
@@ -91,7 +96,7 @@ export default class DetectComponent extends Component {
         setTimeout(this.closeWindow, 1500) //Close app
     }
 
-    closeWindow = ()=>{
+    closeWindow = () => {
         remote.getCurrentWindow().close() //Close app
     }
 
@@ -207,8 +212,8 @@ export default class DetectComponent extends Component {
         WebCamera.set({
             width: '25rem',
             height: '15rem',
-            // dest_width: 1024,
             // dest_height: 768,
+            // dest_width: 1024,
             image_format: 'jpeg',
             jpeg_quality: 100,
             force_flash: false,
@@ -228,6 +233,9 @@ export default class DetectComponent extends Component {
                         <Grid item xs={12} style={{ textAlign: 'center', fontFamily: 'Roboto' }}>
                             <h2 style={{ color: 'white', padding: 0 }}>{strings.appName}</h2>
                         </Grid>
+                        <Grid item xs={12} style={{ textAlign: 'center', fontFamily: 'Roboto' }}>
+                            <h4 style={{ color: '#BDBDBD', padding: 0 }}>{strings.subtitle}</h4>
+                        </Grid>
                         <Grid item xs={12} style={{ textAlign: 'center' }}>
                             <img src={BioMetricImg} width='300' height='250'></img>
                         </Grid>
@@ -244,7 +252,7 @@ export default class DetectComponent extends Component {
                         </Grid>
                         <Grid item xs={12} style={{ textAlign: 'center', fontFamily: 'Roboto', padding: '1rem' }}>
                             <div style={{ padding: '0.5rem', borderRadius: '10px', border: '1px solid #333333', display: 'inline-flex' }}>
-                                <div id="camera" style={{ width: '25rem', height: '16rem', textAlign: 'center', margin: '0 auto' }}></div>
+                                <div id="camera" style={{ width: '25rem', height: '16rem', textAlign: 'center', margin: '0 auto' }}/>
                             </div>
                         </Grid>
                     </Grid>
