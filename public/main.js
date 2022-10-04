@@ -27,13 +27,13 @@ function createWindow(){
           webSecurity: true, 
           nodeIntegration: true
           },
-          frame: !isDetectableMode() ?  true : false, 
+          frame: !isDetectableMode() ? true : false, 
           transparent: true,
     })
     
-    win.loadURL('http://localhost:3000/') // FOR DEVELOPMENT
+   // win.loadURL('http://localhost:3000/') // FOR DEVELOPMENT
     
-    //win.loadURL("file://"+path.join(__dirname, '../build/index.html')) //TO BUILD RELEASE 
+    win.loadURL("file://"+path.join(__dirname, '../build/index.html')) //TO BUILD RELEASE 
     //win.webContents.openDevTools() //DEV TOOLS
     
     win.setMenu(null)

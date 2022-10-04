@@ -16,7 +16,9 @@
     "eject": "react-scripts eject",
     "electron-start": "electron .",
     "electron-start-debug": "electron . --debug",
-    "electron-start-debug-detect": "electron . --debug --detect"
+    "electron-start-debug-detect": "electron . --debug --detect",
+    "electron-start-debug-detect-dev":"electron . --debug --detect -dev",
+    "release-build":"react-scripts build && electron-builder -c.extraMetadata.main=build/main.js"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -2,6 +2,7 @@
     "en":{
         "language":"English",
         "appName": "FaceToFace",
+        "subtitle":"Zetawave personal biometric scanner",
         "description":"Biometric scan tool for Log-in",
         "buttonUpload":"Upload Photo",
         "fileChooserTitle":"Select faces (.jpg, .png)",
